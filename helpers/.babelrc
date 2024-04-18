@@ -1,7 +1,6 @@
 {
   "plugins": [
-    "transform-async-to-generator"
-    // ,
-    // "external-helpers"
+    "transform-async-to-generator",
+    "external-helpers" // 开启 babel-plugin-external-helpers
   ]
 }

@@ -1,1 +1,1 @@
-console.log('i am index');
+console.log("i am index");

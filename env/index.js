@@ -1,27 +1,28 @@
-
-require('./async');
+require("./async");
 // import 'babel-polyfill';
 
-const React = require('react');
+const React = require("react");
 const elements = [1, 2, 3].map((item) => {
-  return (
-    <div>{item}</div>
-  )
+  return <div>{item}</div>;
 });
 
 console.log(elements);
 
 async function a() {
-  console.log('begin');
+  console.log("begin");
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 1000)
-  })
-  console.log('done');
+    }, 1000);
+  });
+  console.log("done");
 }
 a();
 
 console.log(Object.values({ 1: 2 }));
 
 console.log(Array.isArray([]));
+
+// let user = {}; // user 没有 address 属性
+
+// console.log(user?.address?.street); // undefined（不报错）
