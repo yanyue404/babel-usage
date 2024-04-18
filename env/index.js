@@ -23,6 +23,6 @@ console.log(Object.values({ 1: 2 }));
 
 console.log(Array.isArray([]));
 
-// let user = {}; // user 没有 address 属性
+let user = {}; // user 没有 address 属性
 
-// console.log(user?.address?.street); // undefined（不报错）
+console.log(user?.address?.street); // undefined（不报错）

@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           // 配支持的环境
@@ -14,29 +14,10 @@
         },
         "modules": false, // 设置ES6 模块转译的模块格式 默认是 commonjs
         "debug": true, //  debug，编译的时候 console
-        "useBuiltIns": true, //  是否开启自动支持 polyfill
         "include": [], //  总是启用哪些 plugins
         "exclude": [] // 强制不启用哪些 plugins，用来防止某些插件被启用
       }
     ]
   ],
-  "plugins": [
-    "transform-react-jsx", // 如果是需要支持 jsx 这个东西要单独装一下。
-    "transform-runtime",
-    // ! babel 不支持可选链语法，支持方式升级 babel7 【Babel 7原生支持可选链式语法，你只需安装相应的插件即可。】
-    "syntax-optional-chaining",
-    "transform-flow-strip-types"
-  ]
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-transform-react-jsx"]
 }
-
-// {
-//   "presets": [
-//     [
-//       "es2015"
-//     ]
-//   ],
-//   "plugins": [
-//     "transform-react-jsx", // 如果是需要支持 jsx 这个东西要单独装一下。
-//     "transform-regenerator"
-//   ]
-// }

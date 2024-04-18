@@ -1,4 +1,4 @@
-import "babel-polyfill";
+// import "babel-polyfill";
 
 function* gen() {
   yield 1;

@@ -1,8 +1,8 @@
-var webpack = require("webpack");
-var path = require("path");
+const path = require("path");
 
 module.exports = {
-  entry: ["./index.js"],
+  mode: "development",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "build.js",
@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ["babel-loader"],
+        use: "babel-loader",
         exclude: /node_modules/,
       },
     ],
