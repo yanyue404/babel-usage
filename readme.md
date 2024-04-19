@@ -1,38 +1,36 @@
 ## Issues
 
-> https://github.com/sunyongjian/blog/issues/30
-
-有任何此 repo 的问题，或者 babel 使用的疑惑，都可以新建 [issue](https://github.com/sunyongjian/babel-usage/issues/new)，一起讨论~
+有任何此 repo 的问题，或者 babel 使用的疑惑，都可以新建 [issue](https://github.com/yanyue404/babel-usage/issues/new)，一起讨论~
 
 ## 介绍
 
 多个 babel 包的使用 example，每个文件夹下对应有 .babelrc 和 README，可以查看用法。
 
-### [babel-core](https://github.com/sunyongjian/babel-usage/tree/master/babel-core)
+### [@babel/core](https://github.com/yanyue404/babel-usage/tree/master/core)
 
-适用于你在代码中去执行 babel 编译。
+核心库适用于你在代码中去执行 babel 编译。
 
-### [babel-register](https://github.com/sunyongjian/babel-usage/tree/master/register)
+### [@babel/register](https://github.com/yanyue404/babel-usage/tree/master/register)
 
 适用于开发环境，做解析器用。
 
-### [babel-external-helpers](https://github.com/sunyongjian/babel-usage/tree/master/helpers)(helpers)
+### [babel-external-helpers](https://github.com/yanyue404/babel-usage/tree/master/helpers)(helpers)
 
 了解什么是 babel-helpers，启用了 transform-runtime 就不需要自己生产了。
 
-### [transform-runtime, babel-polyfill](https://github.com/sunyongjian/babel-usage/tree/master/async-demo)(async-demo)
+### [transform-runtime, babel-polyfill](https://github.com/yanyue404/babel-usage/tree/master/async-demo)(async-demo)
 
 通过两种不同的垫片方式，在 node 4.8.4 中利用编译器（babel-register）实现 async 函数的运行。
 
-### [transform-runtime](https://github.com/sunyongjian/babel-usage/tree/master/runtime)(runtime)
+### [transform-runtime](https://github.com/yanyue404/babel-usage/tree/master/runtime)(runtime)
 
 通过 webpack 打包，检测 transform-runtime 的效果，是否会重复引入 asyncToGenerator 函数，build 文件 size 。
 
-### [mocha](https://github.com/sunyongjian/babel-usage/tree/master/test)(test)
+### [mocha](https://github.com/yanyue404/babel-usage/tree/master/test)(test)
 
 mocha 结合 babel 测试 es6+ 的代码。
 
-### [babel-preset-env](https://github.com/sunyongjian/babel-usage/tree/master/env)(env)
+### [babel-preset-env](https://github.com/yanyue404/babel-usage/tree/master/env)(env)
 
 - env 这个东西，适用于你知道你要运行的环境，它会帮你做好适配。另外，一些特殊的 plugins 还是需要加入的。要清楚它能做到什么。
 

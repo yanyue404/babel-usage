@@ -1,21 +1,43 @@
 ## 介绍
 
-通过配置 env 的 options，并查看编译的结果
+> 插件和预设（preset）
 
-### 默认值
+一个名称为 env 的 preset。通过配置 env 的 options，并查看编译的结果
 
-babel-preset-env 的默认情况下，作用跟 preset-lastest 是一样的，即包括 preset-es2015,16,17.
+preset 只对我们所使用的并且目标浏览器中缺失的功能进行代码转换和加载 polyfill。
+
+### 配置
+
+```bash
+yarn add --dev @babel/preset-env
+
+./node_modules/.bin/babel src --out-dir lib --presets=@babel/env
+```
 
 ```javascript
-{ "presets": ["latest"] } === { "presets": ["env"] }
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        }
+      }
+    ]
+  ]
+}
 ```
 
 执行
 
-```
-cd env && ../node_modules/.bin/webpack
+```bash
+cd env && npx webpack
 
-node_modules/.bin/babel env/index.js
+npx babel env/index.js
 ```
 
 ### debug
